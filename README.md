@@ -1,7 +1,7 @@
 # Lockit
 A tool for AES encryption/decryption in GCM mode, secure file deletion by overwriting with random data, and secure wiping of encryption keys from memory.
 
-This tool provides file encryption and decryption using AES (Advanced Encryption Standard) in GCM (Galois/Counter Mode). It also supports secure file deletion by overwriting files with random data multiple times before removing them. Additionally, it securely wipes encryption/decryption keys from memory after usage.
+High security for files, with secure deletion achieved by overwriting data with random patterns multiple times before removal. Encryption and decryption keys are also securely wiped from memory after use, preventing unauthorized access.
 
 
 ## Features
