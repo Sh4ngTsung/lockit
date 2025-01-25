@@ -32,10 +32,17 @@ go mod tidy
 ```
 
 ## Windows Installation
+### Download the repository using PowerShell
+
+If you prefer to avoid using Git, you can download the repository directly using PowerShell. Run the following command:
 ```
-git clone https://github.com/Sh4ngTsung/lockit.git
+Invoke-WebRequest -Uri https://github.com/Sh4ngTsung/lockit/archive/refs/heads/main.zip -OutFile lockit.zip
+```
+```
+Expand-Archive -Path lockit.zip -DestinationPath lockit
+```
+```
 cd lockit
-go mod tidy
 ./run.bat
 ```
 
