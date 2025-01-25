@@ -1,5 +1,13 @@
 @echo off
 
+REM Run go mod tidy to ensure dependencies are installed
+go mod tidy
+IF %ERRORLEVEL% NEQ 0 (
+    echo.
+    echo [91mError executing go mod tidy. Please check your dependencies.[0m
+    exit /b %ERRORLEVEL%
+)
+
 REM Run the tests
 go test -v
 IF %ERRORLEVEL% NEQ 0 (
