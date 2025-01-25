@@ -1,12 +1,12 @@
 # Lockit
-A tool for AES encryption/decryption in GCM mode, secure file deletion by overwriting with random data, and secure wiping of encryption keys from memory.
+A tool for AES-256 encryption/decryption in GCM mode, secure file deletion by overwriting with random data, and secure wiping of encryption keys from memory.
 
 High security for files, with secure deletion achieved by overwriting data with random patterns multiple times before removal. Encryption and decryption keys are also securely wiped from memory after use, preventing unauthorized access.
 
 
 ## Features
 
-- **File Encryption**: Encrypts files using AES-GCM with a user-provided key.
+- **File Encryption**: Encrypts files using AES-GCM-256 with a user-provided key.
 - **File Decryption**: Decrypts files that were encrypted using the same key.
 - **Secure File Deletion**: Securely deletes files by overwriting them with random data multiple times (or using fixed patterns).
 - **Directory Processing**: Encrypts, decrypts, or deletes all files in a directory with optional multithreading.
@@ -82,7 +82,7 @@ lockit -t 8 -e -r "/path/to/directory"
 #### Key Derivation
 The program uses **Argon2** to derive a 256-bit key from the user-provided password. Argon2 is a secure key derivation function designed to resist brute-force attacks and ensures the strength of the encryption key.
 
-#### AES-GCM Encryption
+#### AES-GCM-256 Encryption
 AES in **GCM (Galois/Counter Mode)** is used for both encryption and decryption. GCM provides both **confidentiality** (ensures data is kept secret) and **authenticity** (verifies the integrity and authenticity of the data).
 
 #### Secure File Deletion
@@ -98,7 +98,7 @@ The program supports **multithreaded processing** to speed up encryption, decryp
 
 - **Argon2**: The key derivation process uses **Argon2**, a robust and secure hashing algorithm designed to resist brute-force and other attacks. This ensures the strength and security of the encryption key.
   
-- **AES-GCM**: Encryption and decryption are performed using **AES in GCM mode**. GCM guarantees both **confidentiality** and **integrity** of the data, providing protection against tampering and unauthorized access.
+- **AES-GCM-256**: Encryption and decryption are performed using **AES in GCM mode**. GCM guarantees both **confidentiality** and **integrity** of the data, providing protection against tampering and unauthorized access.
 
 - **Secure File Deletion**: To ensure that deleted files cannot be recovered, the tool securely overwrites them with multiple passes of random data and predefined byte patterns (e.g., `0x00`, `0xFF`). This makes it highly resistant to data recovery attempts.
 
