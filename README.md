@@ -103,6 +103,3 @@ The program supports **multithreaded processing** to speed up encryption, decryp
 - **Secure File Deletion**: To ensure that deleted files cannot be recovered, the tool securely overwrites them with multiple passes of random data and predefined byte patterns (e.g., `0x00`, `0xFF`). This makes it highly resistant to data recovery attempts.
 
 - **Memory Zeroization**: After performing encryption or decryption, all sensitive keys are **securely wiped** from memory. This prevents any potential leakage of encryption keys and ensures that no trace of them remains after use.
-
-### License
-This project is licensed under the MIT License - see the LICENSE file for details.
