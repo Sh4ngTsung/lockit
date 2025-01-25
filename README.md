@@ -37,14 +37,8 @@ go mod tidy
 If you prefer to avoid using Git, you can download the repository directly using PowerShell. Run the following command:
 ```
 Invoke-WebRequest -Uri https://github.com/Sh4ngTsung/lockit/archive/refs/heads/main.zip -OutFile lockit.zip
-```
-```
 Expand-Archive -Path lockit.zip -DestinationPath lockit
-```
-```
-cd \.lockit\Lockit-main
-```
-```
+cd .\lockit\Lockit-main
 ./run.bat
 ```
 
