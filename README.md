@@ -42,7 +42,9 @@ Invoke-WebRequest -Uri https://github.com/Sh4ngTsung/lockit/archive/refs/heads/m
 Expand-Archive -Path lockit.zip -DestinationPath lockit
 ```
 ```
-cd lockit
+cd \.lockit\Lockit-main
+```
+```
 ./run.bat
 ```
 
