@@ -25,11 +25,12 @@ mkdir "C:\LockIt" 2>nul
 
 REM Move lockit.exe to the C:\LockIt directory
 echo Moving lockit.exe to C:\LockIt
-move lockit.exe "C:\LockIt\lockit.exe"
+copy lockit.exe "C:\LockIt\lockit.exe"
 
-REM Add C:\LockIt to the system PATH permanently
+REM Add C:\LockIt to PATH without truncating
+for /f "tokens=2 delims==" %%A in ('reg query "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v Path ^| findstr Path') do set OLD_PATH=%%A
 echo Adding C:\LockIt to system PATH
-setx PATH "%PATH%;C:\LockIt"
+setx PATH "%OLD_PATH%;C:\LockIt"
 
 REM Delete temporary files
 del test_invalid_key.txt
